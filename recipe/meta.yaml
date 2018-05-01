@@ -14,22 +14,15 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/FWDselect/FWDselect_{{ version }}.tar.gz
   sha256: e77313b3066806333edec3904d05e4fd51b596737edc337ba4019ecf609d1070
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
